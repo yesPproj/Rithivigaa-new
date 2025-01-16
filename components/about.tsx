@@ -35,7 +35,7 @@ export default function About() {
             className="space-y-4"
           >
             <p className="text-lg text-gray-700 dark:text-gray-300">
-            At RITHVIGAA CHEMICALS, we believe in the power of collaboration and knowledge sharing. By partnering with industry leaders, research institutions, and environmental organizations, we continue to push the boundaries of what's possible. Our goal is to not only meet the needs of today's industries but to anticipate future challenges and deliver solutions that create a positive and lasting impact on both business and the planet.
+            At RITHVIGAA CHEMICALS, we believe in the power of collaboration and knowledge sharing. By partnering with industry leaders, research institutions, and environmental organizations, we continue to push the boundaries of what&apos;s possible. Our goal is to not only meet the needs of today&apos;s industries but to anticipate future challenges and deliver solutions that create a positive and lasting impact on both business and the planet.
             </p>
             <p className="text-lg text-gray-700 dark:text-gray-300">
               Our mission is clear: We strive to create environmentally friendly products without compromising on quality or performance. Whether developing new chemical formulations or improving existing solutions, we are committed to driving positive change and creating a sustainable future for industries around the world.
@@ -62,3 +62,4 @@ export default function About() {
     </section>
   )
 }
+
