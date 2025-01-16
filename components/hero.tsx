@@ -66,8 +66,8 @@ export default function Hero() {
             className="relative h-[300px] sm:h-[400px] lg:h-[500px] w-full mt-8 lg:mt-0"
           >
             <Image
-              src="/chemical-lab.jpg"
-              alt="Chemical Innovation"
+              src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              alt="Advanced chemical research and innovation"
               fill
               className="rounded-lg shadow-xl object-cover"
             />
