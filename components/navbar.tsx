@@ -1,15 +1,11 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { FlaskRoundIcon as Flask, Menu } from 'lucide-react'
 import Link from "next/link"
-import { useState } from "react"
 
 export default function Navbar() {
-  //const [isSearchOpen, setIsSearchOpen] = useState(false)
-
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId)
     if (section) {
