@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
@@ -7,7 +7,7 @@ import Image from "next/image"
 export default function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-900">
-      <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-20"></div>
+      <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-20" aria-hidden="true"></div>
       <div className="container relative z-10 flex min-h-screen flex-col justify-center py-16 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -43,7 +43,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="max-w-[600px] text-blue-100 text-base sm:text-lg md:text-xl"
             >
-              At RITHVIGAA CHEMICALS, we're at the forefront of sustainable chemical manufacturing and cutting-edge research. Discover our comprehensive range of high-quality products and services.
+              At RITHVIGAA CHEMICALS, we&apos;re at the forefront of sustainable chemical manufacturing and cutting-edge research. Discover our comprehensive range of high-quality products and services.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -68,21 +68,12 @@ export default function Hero() {
             <Image
               src="/placeholder.svg?height=500&width=500"
               alt="Chemical Innovation"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-lg shadow-lg"
+              fill
+              className="rounded-lg shadow-lg object-cover"
             />
           </motion.div>
         </div>
       </div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-full text-center"
-      >
-      </motion.div>
     </section>
   )
 }
