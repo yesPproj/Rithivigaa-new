@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { AtomIcon, FlaskConicalIcon, MicroscopeIcon, RecycleIcon, ArrowLeft } from 'lucide-react'
-import Link from "next/link"
+
 import { useParams, useRouter } from "next/navigation"
 import { motion } from "framer-motion"
 
