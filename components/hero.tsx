@@ -8,13 +8,13 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
       <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
-      <div className="container relative z-10 flex min-h-screen flex-col items-center justify-center py-16 px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center text-center max-w-4xl">
+      <div className="container relative z-10 flex min-h-screen flex-col justify-center py-16 px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-8 text-center"
+            className="space-y-8"
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.5 }}
@@ -27,8 +27,8 @@ export default function Hero() {
               </span>
             </motion.div>
             <motion.h1
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-gray-900 dark:text-white leading-tight"
             >
@@ -38,8 +38,8 @@ export default function Hero() {
               Solutions for Tomorrow
             </motion.h1>
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
               className="max-w-[600px] text-gray-600 dark:text-gray-300 text-lg sm:text-xl"
             >
@@ -49,7 +49,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
+              className="flex flex-col sm:flex-row gap-4"
             >
               <Button size="lg" className="w-full sm:w-auto font-medium">
                 Explore Products
@@ -60,13 +60,13 @@ export default function Hero() {
             </motion.div>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1 }}
-            className="relative h-[300px] sm:h-[400px] w-full max-w-[500px] mt-12"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="relative h-[300px] sm:h-[400px] lg:h-[500px] w-full mt-8 lg:mt-0"
           >
             <Image
-              src="/placeholder.svg?height=500&width=500"
+              src="/chemical-lab.jpg"
               alt="Chemical Innovation"
               fill
               className="rounded-lg shadow-xl object-cover"
