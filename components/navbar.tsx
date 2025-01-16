@@ -4,10 +4,24 @@ import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { FlaskRoundIcon as Flask, Menu } from 'lucide-react'
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (isOpen) {
+        setIsOpen(false)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [isOpen])
 
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId)
@@ -22,20 +36,20 @@ export default function Navbar() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
           <Flask className="h-6 w-6 text-primary" />
-          <span className="text-xl font-bold text-gray-900 dark:text-white">RITHVIGAA</span>
+          <span className="text-xl font-bold text-primary dark:text-primary">RITHVIGAA</span>
         </Link>
 
         <nav className="hidden md:flex items-center space-x-6">
-          <button onClick={() => scrollToSection('about')} className="text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-primary-foreground transition-colors">
+          <button onClick={() => scrollToSection('about')} className="text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-200 transition-colors">
             About
           </button>
-          <button onClick={() => scrollToSection('products')} className="text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-primary-foreground transition-colors">
+          <button onClick={() => scrollToSection('products')} className="text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-200 transition-colors">
             Products
           </button>
-          <button onClick={() => scrollToSection('services')} className="text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-primary-foreground transition-colors">
+          <button onClick={() => scrollToSection('services')} className="text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-200 transition-colors">
             Services
           </button>
-          <button onClick={() => scrollToSection('contact')} className="text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-primary-foreground transition-colors">
+          <button onClick={() => scrollToSection('contact')} className="text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-200 transition-colors">
             Contact
           </button>
         </nav>
