@@ -51,7 +51,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="max-w-[600px] text-blue-100 md:text-xl"
             >
-              At RITHVIGAA CHEMICALS, we're at the forefront of sustainable chemical manufacturing and cutting-edge research. Discover our comprehensive range of high-quality products and services.
+              At RITHVIGAA CHEMICALS, we&apos;re at the forefront of sustainable chemical manufacturing and cutting-edge research. Discover our comprehensive range of high-quality products and services.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -90,3 +90,4 @@ export default function Hero() {
     </section>
   )
 }
+
